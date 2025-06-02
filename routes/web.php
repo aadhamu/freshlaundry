@@ -10,24 +10,8 @@ use App\Http\Controllers\AdminController;
 | Web Routes
 |--------------------------------------------------------------------------
 */
-use Illuminate\Support\Facades\DB;
-
-// Route::get('/debug', function() {
-//     try {
-//         DB::connection()->getPdo();
-//         return "Database connection is OK.";
-//     } catch (\Exception $e) {
-//         return "Database connection error: " . $e->getMessage();
-//     }
-// });
-Route::get('/debug-db', function () {
-    try {
-        DB::connection()->getPdo();
-        return "✅ Database connection is OK.";
-    } catch (\Exception $e) {
-        return "❌ Database connection error: " . $e->getMessage();
-    }
-});
+ 
+ 
 // 🏠 Public Pages
 Route::view('/', 'layouts.home')->name('home');
 Route::view('/about', 'layouts.about')->name('about');
