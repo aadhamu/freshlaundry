@@ -11,14 +11,7 @@ use App\Http\Controllers\AdminController;
 |--------------------------------------------------------------------------
 */
  
- Route::get('/debug', function () {
-    try {
-        \Illuminate\Support\Facades\DB::connection()->getPdo();
-        return "✅ Database connection is OK.";
-    } catch (\Exception $e) {
-        return "❌ DB connection error: " . $e->getMessage();
-    }
-});
+ 
 
 // 🏠 Public Pages
 Route::view('/', 'layouts.home')->name('home');
